@@ -1,0 +1,22 @@
+BULLETSHOT_SOUNDTEST = pygame.mixer.Sound('image/sound/bullet.wav')
+OPPONENT1_DOWN_SOUNDTEST = pygame.mixer.Sound('image/sound/opponent1_down.wav')
+GAMEOVER_SOUNDTEST = pygame.mixer.Sound('image/sound/game_over.wav')
+BULLETSHOT_SOUNDTEST.set_volume(0.3)
+OPPONENT1_DOWN_SOUNDTEST.set_volume(0.3)
+GAMEOVER_SOUNDTEST.set_volume(0.3)
+pygame.mixer.music.load('image/sound/game_music.wav')
+pygame.mixer.music.play(-1, 0.0)
+pygame.mixer.music.set_volume(0.25)
+GAME_BACKGROUND = pygame.image.load('image/image/background.png').convert()
+GAME_OVER = pygame.image.load('image/image/gameover.png')
+filename = 'image/image/aircraft_shooter.png'
+AIRCRAFT_IMAGES = pygame.image.load(filename)
+AIRCRAFT_PLAYER = []
+AIRCRAFT_PLAYER.append(pygame.Rect(0, 99, 102, 126))
+AIRCRAFT_PLAYER.append(pygame.Rect(165, 360, 102, 126))
+AIRCRAFT_PLAYER.append(pygame.Rect(165, 234, 102, 126))
+AIRCRAFT_PLAYER.append(pygame.Rect(330, 624, 102, 126))
+AIRCRAFT_PLAYER.append(pygame.Rect(330, 498, 102, 126))
+AIRCRAFT_PLAYER.append(pygame.Rect(432, 624, 102, 126))
+AIRCRAFT_PLAYER_POSITION = [200, 600]
+OPPONENT = Opponent(AIRCRAFT_IMAGES, AIRCRAFT_PLAYER, AIRCRAFT_PLAYER_POSITION)
